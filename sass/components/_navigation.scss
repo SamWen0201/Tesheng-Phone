@@ -1,0 +1,138 @@
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.navigation {
+  &__background {
+    position: fixed;
+    top: 4.5rem;
+    left: 5.5rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-image: radial-gradient(
+      variables.$color-brown-dark,
+      variables.$color-brown-light
+    );
+    transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
+    z-index: 1000;
+  }
+  &__toggle {
+    display: none;
+  }
+  &__button {
+    background-color: variables.$color-white;
+    display: inline-block;
+    box-shadow: 0 0.5rem 2rem rgba(variables.$color-black, 0.3);
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 4rem;
+    left: 5rem;
+    z-index: 3000;
+    cursor: pointer;
+  }
+
+  &__nav {
+    height: 100vh;
+    position: fixed;
+    z-index: -1; /* 將 nav 的 z-index 隱藏在頁面下，否則就算設定 opacity:0;, width:0; 依舊會被點擊到 */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  &__list {
+    @include mixins.absCenter;
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+  }
+  &__item {
+    margin: 1rem;
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: variables.$color-white;
+      font-size: 3.6rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 0.3rem;
+      background-image: linear-gradient(
+        135deg,
+        transparent 0%,
+        transparent 50%,
+        variables.$color-white 50%,
+        variables.$color-white
+      );
+      background-size: 240%;
+      display: inline-block;
+      padding: 1rem 2rem;
+      transition: all 0.4s;
+    }
+    &:hover {
+      background-position: 100%;
+      color: variables.$color-brown-dark;
+    }
+  }
+  &__toggle:checked ~ &__background {
+    transform: scale(70);
+  }
+  &__toggle:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+    z-index: 1500; /* 恢復 z-index */
+  }
+
+  &__icon {
+    &,
+    &::before,
+    &::after {
+      display: inline-block;
+      background-color: variables.$color-black;
+      height: 3px;
+      width: 3.5rem;
+      transition: all 0.2s;
+    }
+    @include mixins.absCenter;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1rem;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1rem;
+      left: 0;
+    }
+  }
+
+  &__button:hover &__icon {
+    &::before {
+      transform: translateY(-0.2rem);
+    }
+    &::after {
+      transform: translateY(0.2rem);
+    }
+  }
+
+  &__toggle:checked ~ &__button > &__icon {
+    & {
+      background-color: transparent;
+    }
+    &::before {
+      transform: rotate(135deg);
+      top: 0;
+    }
+    &::after {
+      transform: rotate(-135deg);
+      top: 0;
+    }
+  }
+}

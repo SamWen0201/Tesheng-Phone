@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesheng Phone</title>
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navigation">
+        <input type="checkbox" class="navigation__toggle" id="navi-toggle" />
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Product</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Design</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Features</a>
+            </li>
+            <li class="navigation__item">
+              <a href="#" class="navigation__link">Pricing</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- header -->
+      <header class="header">
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main u-margin-bottom-sm">
+              for a smarter life.</span
+            >
+            <span class="heading-primary--sub"
+              >Designed for leaders who don't have time to waste.</span
+            >
+          </h1>
+          <a href="#popup" class="btn btn--arrow btn--animated"
+            >Learn more <span>&rarr;</span></a
+          >
+        </div>
+        <div class="header__img-container">
+          <img
+            src="img/vojtech-bruzek-J82GxqnwKSs-unsplash.jpg"
+            alt="phone background"
+            class="header__img"
+          />
+        </div>
+      </header>
+
+      <!-- PURE CSS POPUP -->
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <a href="#" class="popup__close">&#215;</a>
+          <div class="popup__left"></div>
+
+          <div class="popup__right">
+            <h2 class="heading-secondary u-margin-bottom-md">
+              for your busiest days
+            </h2>
+            <p class="popup__text u-margin-bottom-md">
+              Tesheng Phone is built to support professionals who manage complex
+              schedules and constant communication every day. Designed with
+              clarity and intention, it brings structure to your workflow and
+              reduces unnecessary distractions. With a clean interface and
+              thoughtful design, Tesheng Phone helps you stay focused,
+              organized, and in control — even when your day is filled with
+              meetings, messages, and decisions. It quietly works in the
+              background, simplifying your digital experience without adding
+              extra steps or demanding more of your attention.
+            </p>
+            <a href="#popup" class="btn btn--scale">Buy it now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
