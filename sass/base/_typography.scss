@@ -41,6 +41,13 @@ body {
     variables.$color-brown-dark 60%,
     variables.$color-brown-light
   );
+  &--blue {
+    background-image: linear-gradient(
+      to right bottom,
+      variables.$color-primary 60%,
+      variables.$color-primary-light
+    );
+  }
   background-clip: text;
   color: transparent;
   display: inline-block;
