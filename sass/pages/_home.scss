@@ -14,3 +14,11 @@
   padding: 15rem 20rem;
   background-color: variables.$color-primary-light;
 }
+
+.section-testimonials {
+  grid-column: 1 / -1;
+  padding: 10rem 10rem;
+  background-color: variables.$color-white;
+  display: grid;
+  justify-items: center;
+}

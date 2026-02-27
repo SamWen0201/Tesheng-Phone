@@ -1,0 +1,41 @@
+@use "../abstracts/variables";
+.testimonial-list {
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 2px;
+  box-shadow: 0.5rem 1rem 3rem rgba(variables.$color-primary, 0.09);
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem;
+
+  position: relative;
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__caption {
+    font-size: 1.4rem;
+
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  &__text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}

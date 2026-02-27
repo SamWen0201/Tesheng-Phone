@@ -67,3 +67,24 @@
     }
   }
 }
+
+.btn-text {
+  border: none;
+  border-bottom: 1px solid variables.$color-primary;
+  font-size: 1.6rem;
+  padding: 5px;
+  // text-transform: uppercase;
+  display: block;
+  color: variables.$color-primary;
+  font-weight: 400;
+  // font-family: "Courier New", Courier, monospace;
+
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$color-primary-light;
+    color: variables.$color-white;
+    transform: translateY(-3px);
+  }
+}

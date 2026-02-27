@@ -66,7 +66,7 @@ body {
   background-image: linear-gradient(to right bottom, #aa9978 60%, #c7c3af);
 }
 .heading-secondary--blue {
-  background-image: linear-gradient(to right bottom, #232f3a 60%, #313f4b);
+  background-image: linear-gradient(to right bottom, #232f3a 90%, #b6d9ed);
 }
 .heading-secondary {
   background-clip: text;
@@ -93,6 +93,11 @@ body {
 
 .u-text-center {
   text-align: center;
+}
+
+.u-horizontal-center {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes moveInBottom {
@@ -159,6 +164,23 @@ body {
 .btn--scale:active {
   transform: translateY(0.5rem);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
+.btn-text {
+  border: none;
+  border-bottom: 1px solid #232f3a;
+  font-size: 1.6rem;
+  padding: 5px;
+  display: block;
+  color: #232f3a;
+  font-weight: 400;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.btn-text:hover {
+  background-color: #313f4b;
+  color: #f3f3f3;
+  transform: translateY(-3px);
 }
 
 .feature-list {
@@ -386,6 +408,43 @@ body {
   transform: scale(1) translate(-50%, -50%);
 }
 
+.testimonial-list {
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 2px;
+  box-shadow: 0.5rem 1rem 3rem rgba(35, 47, 58, 0.09);
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem;
+  position: relative;
+}
+.testimonial__shape {
+  width: 15rem;
+  height: 15rem;
+}
+.testimonial__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.testimonial__caption {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+.testimonial__text {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
 .header {
   background-color: #eee;
   padding: 5rem;
@@ -425,6 +484,14 @@ body {
   grid-column: 1/-1;
   padding: 15rem 20rem;
   background-color: #313f4b;
+}
+
+.section-testimonials {
+  grid-column: 1/-1;
+  padding: 10rem 10rem;
+  background-color: #f3f3f3;
+  display: grid;
+  justify-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
