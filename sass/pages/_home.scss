@@ -22,3 +22,17 @@
   display: grid;
   justify-items: center;
 }
+
+.section-cta {
+  grid-column: 1 / -1;
+  padding: 15rem 20rem;
+  background-color: variables.$color-primary;
+  display: grid;
+  justify-items: center;
+
+  &__text {
+    font-size: 2rem;
+    font-weight: 400;
+    color: variables.$color-white;
+  }
+}
