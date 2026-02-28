@@ -13,6 +13,7 @@
   align-items: center;
 
   @include mixins.respond(tab-port) {
+    padding-bottom: 2rem;
     padding-top: 12rem;
   }
 

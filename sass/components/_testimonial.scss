@@ -1,8 +1,14 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
+
 .testimonial-list {
   display: grid;
-  grid-gap: 5rem;
+  gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+
+  @include mixins.respond(tab-land) {
+    grid-template-columns: auto;
+  }
 }
 
 .testimonial {
@@ -17,9 +23,21 @@
 
   position: relative;
 
+  @include mixins.respond(phone) {
+    grid-template-columns: auto;
+    justify-items: center;
+    padding: 3rem;
+    gap: 1rem;
+  }
+
   &__shape {
     width: 15rem;
     height: 15rem;
+
+    @include mixins.respond(phone) {
+      width: 20rem;
+      height: 20rem;
+    }
   }
   &__img {
     height: 100%;
@@ -33,9 +51,25 @@
     position: absolute;
     bottom: 2rem;
     right: 2rem;
+
+    @include mixins.respond(phone) {
+      font-size: 1.2rem;
+      bottom: 1rem;
+      right: 1rem;
+    }
   }
   &__text {
     font-size: 1.4rem;
     line-height: 1.5;
+    hyphens: auto;
+
+    @include mixins.respond(tab-land) {
+      font-size: 1.8rem;
+    }
+
+    @include mixins.respond(tab-port) {
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
   }
 }

@@ -38,6 +38,10 @@
   background-color: variables.$color-white;
   display: grid;
   justify-items: center;
+
+  @include mixins.respond(tab-port) {
+    padding: 10rem 5rem;
+  }
 }
 
 .section-cta {
@@ -46,15 +50,36 @@
   background-color: variables.$color-primary-light;
   display: grid;
   justify-items: center;
+  text-align: center;
 
   &__text {
     font-size: 2rem;
     font-weight: 400;
     color: variables.$color-white;
+
+    @include mixins.respond(tab-port) {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include mixins.respond(tab-port) {
+    padding: 10rem 5rem;
+  }
+
+  @include mixins.respond(phone) {
+    padding: 8rem 3rem;
   }
 }
 .footer {
   padding: 10rem 10rem 3rem;
   grid-column: 1 / -1;
   background-color: variables.$color-white;
+
+  @include mixins.respond(tab-port) {
+    padding: 10rem 5rem 3rem;
+  }
+
+  @include mixins.respond(phone) {
+    padding: 10rem 3rem 3rem;
+  }
 }
