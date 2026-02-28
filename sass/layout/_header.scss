@@ -2,7 +2,7 @@
 @use "../abstracts/mixins";
 
 .header {
-  background-color: variables.$color-grey-light;
+  background-color: variables.$color-white;
   padding: 5rem;
   grid-row: 1 / 2;
   grid-column: 1 / -1;
