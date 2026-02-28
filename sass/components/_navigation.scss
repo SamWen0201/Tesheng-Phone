@@ -15,6 +15,16 @@
     );
     transition: all 1s cubic-bezier(0.65, 0, 0.35, 1);
     z-index: 1000;
+
+    @include mixins.respond(tab-port) {
+      top: 3rem;
+      left: 4rem;
+    }
+
+    @include mixins.respond(phone) {
+      top: 2rem;
+      left: 2rem;
+    }
   }
   &__toggle {
     display: none;
@@ -31,6 +41,16 @@
     left: 5rem;
     z-index: 3000;
     cursor: pointer;
+
+    @include mixins.respond(tab-port) {
+      top: 2.5rem;
+      left: 3.5rem;
+    }
+
+    @include mixins.respond(phone) {
+      top: 1.5rem;
+      left: 1.5rem;
+    }
   }
 
   &__nav {
@@ -92,7 +112,7 @@
     &::before,
     &::after {
       display: inline-block;
-      background-color: variables.$color-black;
+      background-color: variables.$color-primary;
       height: 3px;
       width: 3.5rem;
       transition: all 0.2s;

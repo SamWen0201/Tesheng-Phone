@@ -14,7 +14,7 @@
 
   @include mixins.respond(tab-port) {
     padding-bottom: 2rem;
-    padding-top: 12rem;
+    padding-top: 8rem;
   }
 
   @include mixins.respond(phone) {
