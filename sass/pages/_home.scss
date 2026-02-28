@@ -18,6 +18,18 @@
   grid-column: 1 / -1;
   padding: 15rem 20rem;
   background-color: variables.$color-primary-light;
+
+  @include mixins.respond(tab-land) {
+    padding: 10rem 12rem;
+  }
+
+  @include mixins.respond(tab-port) {
+    padding: 10rem 5rem;
+  }
+
+  @include mixins.respond(phone) {
+    padding: 8rem 3rem;
+  }
 }
 
 .section-testimonials {

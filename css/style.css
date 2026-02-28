@@ -135,7 +135,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .heading-secondary {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -701,6 +701,21 @@ body {
   grid-column: 1/-1;
   padding: 15rem 20rem;
   background-color: #313f4b;
+}
+@media (max-width: 75em) {
+  .section-feature {
+    padding: 10rem 12rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .section-feature {
+    padding: 10rem 5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .section-feature {
+    padding: 8rem 3rem;
+  }
 }
 
 .section-testimonials {
