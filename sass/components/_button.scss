@@ -2,6 +2,7 @@
 @use "../base/animations";
 
 .btn {
+  &,
   &:link,
   &:visited {
     text-decoration: none;
@@ -37,6 +38,7 @@
   }
 
   &--scale {
+    &,
     &:link,
     &:visited {
       position: relative;

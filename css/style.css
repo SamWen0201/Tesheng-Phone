@@ -66,7 +66,7 @@ body {
   background-image: linear-gradient(to right bottom, #aa9978 60%, #c7c3af);
 }
 .heading-secondary--blue {
-  background-image: linear-gradient(to right bottom, #232f3a 90%, #b6d9ed);
+  background-image: linear-gradient(to right bottom, #232f3a 60%, #b6d9ed);
 }
 .heading-secondary {
   background-clip: text;
@@ -114,7 +114,7 @@ body {
     transform: translateY(0);
   }
 }
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 500;
@@ -145,10 +145,10 @@ body {
   animation: moveInBottom 1s ease 1s;
   animation-fill-mode: backwards;
 }
-.btn--scale:link, .btn--scale:visited {
+.btn--scale, .btn--scale:link, .btn--scale:visited {
   position: relative;
 }
-.btn--scale:link::after, .btn--scale:visited::after {
+.btn--scale::after, .btn--scale:link::after, .btn--scale:visited::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -251,6 +251,52 @@ body {
   grid-column: 1/-1;
   line-height: 2;
   font-weight: 500;
+}
+
+.form__group {
+  position: relative;
+}
+.form__group:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+.form__input {
+  outline: none;
+  padding: 1.3rem 1.5rem;
+  background-color: #fff;
+  width: 100%;
+  font-size: 1.3rem;
+  font-family: "Zalando Sans Expanded", sans-serif;
+  letter-spacing: 1px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 2px;
+  box-shadow: 0 5rem 4rem rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.form__input:focus {
+  border-bottom: 3px solid #aa9978;
+  box-shadow: 0 5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.form__input::placeholder {
+  color: #777;
+}
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  transform: translateY(0);
+}
+.form__label {
+  position: absolute;
+  font-size: 1.3rem;
+  left: 1.3rem;
+  bottom: 1.5rem;
+  transform: translateY(3.3rem);
+  opacity: 1;
+  transition: all 0.3s;
+  color: #777;
+}
+.form__button {
+  font-family: "Zalando Sans Expanded", sans-serif;
+  cursor: pointer;
 }
 
 .navigation__background {
@@ -374,6 +420,14 @@ body {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+}
+@supports (backdrop-filter: blur(3px)) {
+  .popup {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+  }
+}
+.popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -387,8 +441,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   width: 70%;
   background-color: #f3f3f3;
   border-radius: 3px;
@@ -399,25 +453,20 @@ body {
   transition: all 0.3s 0.2s;
 }
 .popup__left {
-  flex: 0 1 33.33333%;
-  align-self: stretch;
   background-image: url(../img/phone-popup.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .popup__right {
-  flex: 0 1 66.66667%;
   padding: 3rem 5rem;
+  text-align: center;
 }
 .popup__img {
   width: 100%;
 }
 .popup__text {
   font-size: 1.4rem;
-  column-count: 2;
-  column-gap: 4rem;
-  column-rule: solid 1px #c7c3af;
   hyphens: auto;
 }
 .popup__close:link, .popup__close:visited {
@@ -426,8 +475,10 @@ body {
   color: #777;
   transition: all 0.3s;
   position: absolute;
-  right: 2rem;
-  top: 2rem;
+  right: 1.5rem;
+  top: 1.5rem;
+  display: block;
+  padding: 0.5rem;
 }
 .popup__close:hover {
   color: #aa9978;

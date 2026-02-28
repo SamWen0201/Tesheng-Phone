@@ -168,7 +168,7 @@
       </section>
 
       <!-- cta-section -->
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <h2 class="heading-secondary u-margin-bottom-big">
           Ready to reclaim your time?
         </h2>
@@ -181,25 +181,41 @@
       <!-- PURE CSS POPUP -->
       <div class="popup" id="popup">
         <div class="popup__content">
-          <a href="#" class="popup__close">&#215;</a>
+          <a href="#cta" class="popup__close">&#215;</a>
+
           <div class="popup__left"></div>
 
           <div class="popup__right">
             <h2 class="heading-secondary u-margin-bottom-md">
-              for your busiest days
+              Join the Exclusive List
             </h2>
             <p class="popup__text u-margin-bottom-md">
-              Tesheng Phone is built to support professionals who manage complex
-              schedules and constant communication every day. Designed with
-              clarity and intention, it brings structure to your workflow and
-              reduces unnecessary distractions. With a clean interface and
-              thoughtful design, Tesheng Phone helps you stay focused,
-              organized, and in control — even when your day is filled with
-              meetings, messages, and decisions. It quietly works in the
-              background, simplifying your digital experience without adding
-              extra steps or demanding more of your attention.
+              Tesheng Phone is currently in the final stages of refinement. We
+              are opening a limited number of spots for our exclusive
+              early-access program. Join the list to be the first to experience
+              the future of deep work.
             </p>
-            <a href="#popup" class="btn btn--scale">Buy it now</a>
+
+            <div class="popup__form">
+              <form action="#" class="form">
+                <div class="form__group">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form__input"
+                    placeholder="Enter your email address to secure your spot"
+                    required
+                  />
+                  <label for="email" class="form__label">Email</label>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--scale form__button">
+                    Join the Waitlist
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

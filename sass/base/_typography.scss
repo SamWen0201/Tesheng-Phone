@@ -44,7 +44,7 @@ body {
   &--blue {
     background-image: linear-gradient(
       to right bottom,
-      variables.$color-primary 90%,
+      variables.$color-primary 60%,
       variables.$color-secondary
     );
   }
