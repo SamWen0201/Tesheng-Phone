@@ -12,18 +12,37 @@
   grid-template-columns: subgrid;
   align-items: center;
 
+  @include mixins.respond(tab-port) {
+    padding-top: 12rem;
+  }
+
+  @include mixins.respond(phone) {
+    padding: 0;
+    padding-top: 6rem;
+  }
+
   &__text-box {
     padding: 5rem;
     grid-row: 1 / 2;
     grid-column: full-start / col-start 6;
     position: relative;
     z-index: 10; // make the text above the phone picture
+
+    @include mixins.respond(tab-port) {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+      text-align: center;
+    }
   }
 
   &__img-container {
     grid-row: 1 / 2;
     grid-column: col-start 3 / full-end;
     // filter: brightness(95%);
+
+    @include mixins.respond(tab-port) {
+      grid-column: center-start / center-end;
+    }
   }
 
   &__img {
