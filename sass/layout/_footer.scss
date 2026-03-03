@@ -30,6 +30,9 @@
       transition: all 0.3s;
     }
     &:hover::after {
+      @media only screen and (hover: none) {
+        width: 0;
+      }
       width: 100%;
     }
   }

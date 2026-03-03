@@ -12,6 +12,13 @@
   @include mixins.respond(tab-port) {
     grid-template-rows: auto;
   }
+
+  @include mixins.respond(phone) {
+    grid-template-columns:
+      [full-start] minmax(2rem, 1fr) [center-start]
+      repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end]
+      minmax(2rem, 1fr) [full-end];
+  }
 }
 
 .section-feature {

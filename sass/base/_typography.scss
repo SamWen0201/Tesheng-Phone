@@ -91,6 +91,11 @@ body {
   &:hover {
     transform: skewY(1deg) skewX(15deg) scale(1.1);
     text-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
+
+    // in the tab-port
+    @media only screen and (max-width: 75em) and (hover: none) {
+      transform: none;
+    }
   }
 
   @include mixins.respond(tab-land) {
