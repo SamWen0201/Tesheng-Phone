@@ -24,6 +24,8 @@
     @include mixins.respond(phone) {
       top: 2rem;
       left: 2rem;
+      height: 5rem;
+      width: 5rem;
     }
   }
   &__toggle {
@@ -50,6 +52,8 @@
     @include mixins.respond(phone) {
       top: 1.5rem;
       left: 1.5rem;
+      height: 6rem;
+      width: 6rem;
     }
   }
 

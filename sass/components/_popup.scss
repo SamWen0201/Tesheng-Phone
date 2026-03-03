@@ -45,6 +45,10 @@
       grid-template-columns: auto;
       width: 90%;
     }
+    @include mixins.respond(phone) {
+      grid-template-columns: auto;
+      width: 95%;
+    }
   }
 
   &__left {
@@ -63,6 +67,10 @@
   &__text {
     font-size: 1.4rem;
     hyphens: auto;
+
+    @include mixins.respond(phone) {
+      font-size: 14px;
+    }
   }
 
   &__form {

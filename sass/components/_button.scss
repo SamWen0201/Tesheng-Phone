@@ -31,6 +31,13 @@
     span {
       transform: translateX(1rem);
     }
+    @media only screen and (hover: none) {
+      background-color: variables.$color-primary;
+      box-shadow: 0 1rem 3rem rgba(variables.$color-black, 0.1);
+      span {
+        transform: none;
+      }
+    }
   }
   &--animated {
     animation: moveInBottom 1s ease 1s;
@@ -61,6 +68,9 @@
       &::after {
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
+        @media only screen and (hover: none) {
+          transform: none;
+        }
       }
     }
     &:active {
@@ -99,6 +109,10 @@
       &::after {
         transform: scaleX(1.4) scaleY(1.6);
         opacity: 0;
+
+        @media only screen and (hover: none) {
+          transform: none;
+        }
       }
     }
     &:active {
