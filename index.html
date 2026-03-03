@@ -25,23 +25,23 @@
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Product</a>
+              <a href="#header" class="navigation__link">Product</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Design</a>
+              <a href="#feature" class="navigation__link">Feature</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Features</a>
+              <a href="#testimonials" class="navigation__link">Testimonials</a>
             </li>
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Pricing</a>
+              <a href="#cta" class="navigation__link">Get Access</a>
             </li>
           </ul>
         </nav>
       </div>
 
       <!-- header -->
-      <header class="header">
+      <header class="header" id="header">
         <div class="header__text-box">
           <h1 class="heading-primary">
             <span class="heading-primary--main u-margin-bottom-sm">
@@ -51,10 +51,11 @@
               >Designed for leaders who don't have time to waste.</span
             >
           </h1>
-          <a href="#popup" class="btn btn--arrow btn--animated"
+          <a href="#feature" class="btn btn--arrow btn--animated"
             >Learn more <span>&rarr;</span></a
           >
         </div>
+
         <div class="header__img-container">
           <img
             src="img/vojtech-bruzek-J82GxqnwKSs-unsplash.jpg"
@@ -64,28 +65,187 @@
         </div>
       </header>
 
+      <!-- feature section -->
+      <section class="section-feature" id="feature">
+        <h2 class="heading-secondary u-margin-bottom-big">
+          Designed for the High-Stakes Career.
+        </h2>
+        <div class="feature-list">
+          <div class="feature">
+            <svg class="feature__icon">
+              <use xlink:href="img/sprite.svg#icon-target"></use>
+            </svg>
+            <h3 class="feature__title">
+              Intelligent Focus
+              <span>Reclaim your deep work.</span>
+            </h3>
+            <div class="feature__description">
+              Managing a large team requires peak concentration. Our AI-driven
+              filtering ensures only critical notifications reach you during
+              meetings, shielding you from the noise of a hectic schedule.
+            </div>
+          </div>
+          <div class="feature">
+            <svg class="feature__icon">
+              <use xlink:href="img/sprite.svg#icon-shield"></use>
+            </svg>
+            <h3 class="feature__title">
+              Executive Sync
+              <span>Your schedule, unified.</span>
+            </h3>
+            <div class="feature__description">
+              From Taoyuan to the world—Tesheng Phone integrates your complex
+              professional calendar and personal errands into a singular,
+              intuitive interface. Never miss a deadline or a personal milestone
+              again.
+            </div>
+          </div>
+          <div class="feature">
+            <svg class="feature__icon">
+              <use xlink:href="img/sprite.svg#icon-power"></use>
+            </svg>
+            <h3 class="feature__title">
+              Masterful Craft
+              <span>Elegance meets endurance.</span>
+            </h3>
+            <div class="feature__description">
+              Built for those who appreciate the finer details. With a
+              minimalist titanium frame and a battery that outlasts your longest
+              workdays, it’s the sophisticated tool you didn't know you were
+              missing.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonials section -->
+      <section class="section-testimonials" id="testimonials">
+        <h2
+          class="heading-secondary heading-secondary--blue u-margin-bottom-big u-horizontal-center"
+        >
+          Trusted by Leaders in Tech.
+        </h2>
+        <div class="testimonial-list u-margin-bottom-big">
+          <div class="testimonial">
+            <figure class="testimonial__shape">
+              <img
+                src="img/testimonial-figure-1.jpg"
+                alt="Business Woman"
+                class="testimonial__img"
+              />
+              <figcaption class="testimonial__caption">
+                Sarah W., Operations Director
+              </figcaption>
+            </figure>
+            <p class="testimonial__text">
+              I manage a team of 50 across different time zones. I don't have
+              time for devices that distract me. Tesheng Phone is the first tool
+              that actually feels like it’s working for me, not against me.
+            </p>
+          </div>
+
+          <div class="testimonial">
+            <figure class="testimonial__shape">
+              <img
+                src="img/testimonial-figure-2.jpg"
+                alt="Business Woman"
+                class="testimonial__img"
+              />
+              <figcaption class="testimonial__caption">
+                Dr. James L., Financial Consultant
+              </figcaption>
+            </figure>
+            <p class="testimonial__text">
+              It’s rare to find a device that balances high-end security with
+              such an intuitive interface. It’s become an essential part of my
+              daily workflow in Taoyuan.
+            </p>
+          </div>
+        </div>
+
+        <button class="btn-text">
+          Read all testimonials <span>&rarr;</span>
+        </button>
+      </section>
+
+      <!-- cta-section -->
+      <section class="section-cta" id="cta">
+        <h2 class="heading-secondary u-margin-bottom-big">
+          Ready to reclaim your time?
+        </h2>
+        <p class="section-cta__text u-margin-bottom-hg">
+          Join the waitlist for executive access to Tesheng Phone.
+        </p>
+        <a href="#popup" class="btn btn--cta">Get Exclusive Access</a>
+      </section>
+
+      <!-- footer -->
+      <footer class="footer" id="footer">
+        <div class="footer__logo">
+          <img
+            src="img/logo-512w.png"
+            alt="Tesheng Phone. Focus, Refined"
+            class="footer__img"
+          />
+        </div>
+
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#header" class="footer__link">Home</a>
+            </li>
+            <li class="footer__item">
+              <a href="#feature" class="footer__link">Feature</a>
+            </li>
+            <li class="footer__item">
+              <a href="#testimonials" class="footer__link">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="footer__copyright">
+          Copyright &#169; 2026 Tesheng Wen. All rights reserved.
+        </p>
+      </footer>
+
       <!-- PURE CSS POPUP -->
       <div class="popup" id="popup">
         <div class="popup__content">
-          <a href="#" class="popup__close">&#215;</a>
+          <a href="#cta" class="popup__close">&#215;</a>
+
           <div class="popup__left"></div>
 
           <div class="popup__right">
             <h2 class="heading-secondary u-margin-bottom-md">
-              for your busiest days
+              Join the Exclusive List
             </h2>
             <p class="popup__text u-margin-bottom-md">
-              Tesheng Phone is built to support professionals who manage complex
-              schedules and constant communication every day. Designed with
-              clarity and intention, it brings structure to your workflow and
-              reduces unnecessary distractions. With a clean interface and
-              thoughtful design, Tesheng Phone helps you stay focused,
-              organized, and in control — even when your day is filled with
-              meetings, messages, and decisions. It quietly works in the
-              background, simplifying your digital experience without adding
-              extra steps or demanding more of your attention.
+              Tesheng Phone is currently in the final stages of refinement. We
+              are opening a limited number of spots for our exclusive
+              early-access program. Join the list to be the first to experience
+              the future of deep work.
             </p>
-            <a href="#popup" class="btn btn--scale">Buy it now</a>
+
+            <div class="popup__form">
+              <form action="#" class="form">
+                <div class="form__group">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form__input"
+                    placeholder="Enter your email address to secure your spot"
+                    required
+                  />
+                  <label for="email" class="form__label">Email</label>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--scale form__button">
+                    Join the Waitlist
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,66 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.footer {
+  display: grid;
+  row-gap: 5rem;
+  justify-items: center;
+
+  &__navigation {
+    border-top: 1px solid variables.$color-primary-light;
+    padding: 1.5rem 2rem;
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__item {
+    // padding: 0.8rem;
+    position: relative;
+    &::after {
+      content: "";
+      height: 2px;
+      width: 0;
+      background-color: variables.$color-primary-light;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      width: 100%;
+      @media only screen and (hover: none) {
+        width: 0;
+      }
+    }
+  }
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: variables.$color-primary;
+      font-size: 1.4rem;
+
+      @include mixins.respond(tab-port) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__logo {
+  }
+  &__img {
+    width: 20rem;
+  }
+  &__copyright {
+    padding: 1.5rem 2rem;
+    font-size: 1.3rem;
+    text-align: center;
+
+    @include mixins.respond(tab-port) {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,75 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+.testimonial-list {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+
+  @include mixins.respond(tab-land) {
+    grid-template-columns: auto;
+  }
+}
+
+.testimonial {
+  background-color: variables.$color-white;
+  padding: 5rem;
+  border-radius: 2px;
+  box-shadow: 0.5rem 1rem 3rem rgba(variables.$color-primary, 0.09);
+
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 2rem;
+
+  position: relative;
+
+  @include mixins.respond(phone) {
+    grid-template-columns: auto;
+    justify-items: center;
+    padding: 3rem;
+    gap: 1rem;
+  }
+
+  &__shape {
+    width: 15rem;
+    height: 15rem;
+
+    @include mixins.respond(phone) {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  &__caption {
+    font-size: 1.4rem;
+
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+
+    @include mixins.respond(phone) {
+      font-size: 1.2rem;
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
+  &__text {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    hyphens: auto;
+
+    @include mixins.respond(tab-land) {
+      font-size: 1.8rem;
+    }
+
+    @include mixins.respond(tab-port) {
+      font-size: 1.4rem;
+      padding: 1rem;
+    }
+  }
+}

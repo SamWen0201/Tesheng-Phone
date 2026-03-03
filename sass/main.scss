@@ -6,9 +6,13 @@
 @use "base/utilities";
 
 @use "components/button";
+@use "components/feature";
+@use "components/form";
 @use "components/navigation";
 @use "components/popup";
+@use "components/testimonial";
 
+@use "layout/footer";
 @use "layout/header";
 
 @use "pages/home";

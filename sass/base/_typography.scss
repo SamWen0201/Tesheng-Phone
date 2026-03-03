@@ -20,15 +20,49 @@ body {
 
   &--main {
     font-size: 4.8rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.1rem;
     line-height: 1.4;
-    display: inline-block;
+    display: block;
+
+    @media only screen and (max-width: 87.5em) {
+      font-size: 3.6rem;
+    }
+    @media only screen and (max-width: 62.5em) {
+      font-size: 3rem;
+    }
+
+    @include mixins.respond(tab-port) {
+      font-size: 4rem;
+    }
+
+    @include mixins.respond(phone) {
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
   }
   &--sub {
     font-size: 2rem;
-    font-weight: 400;
-    display: inline-block;
+    font-weight: 200;
+    display: block;
+
+    @media only screen and (max-width: 93.75em) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: 87.5em) {
+      font-size: 1.4rem;
+    }
+    @media only screen and (max-width: 62.5em) {
+      font-size: 1.3rem;
+    }
+
+    @include mixins.respond(tab-port) {
+      font-size: 1.4rem;
+    }
+
+    @include mixins.respond(phone) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -41,6 +75,13 @@ body {
     variables.$color-brown-dark 60%,
     variables.$color-brown-light
   );
+  &--blue {
+    background-image: linear-gradient(
+      to right bottom,
+      variables.$color-primary 60%,
+      variables.$color-secondary
+    );
+  }
   background-clip: text;
   color: transparent;
   display: inline-block;
@@ -50,5 +91,18 @@ body {
   &:hover {
     transform: skewY(1deg) skewX(15deg) scale(1.1);
     text-shadow: 0 1rem 2rem rgba(variables.$color-black, 0.2);
+
+    // in the tab-port
+    @media only screen and (max-width: 75em) and (hover: none) {
+      transform: none;
+    }
+  }
+
+  @include mixins.respond(tab-land) {
+    font-size: 2.4rem;
+  }
+
+  @include mixins.respond(phone) {
+    font-size: 1.6rem;
   }
 }
