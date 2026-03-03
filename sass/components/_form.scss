@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .form {
   &__group {
@@ -25,9 +26,17 @@
       border-bottom: 3px solid variables.$color-brown-dark;
       box-shadow: 0 5rem 4rem rgba(variables.$color-black, 0.15);
     }
+
+    @include mixins.respond(phone) {
+      font-size: 16px;
+    }
   }
   &__input::placeholder {
     color: variables.$color-grey-dark;
+
+    @include mixins.respond(phone) {
+      font-size: 1rem;
+    }
   }
   &__input:placeholder-shown + &__label {
     opacity: 0;
