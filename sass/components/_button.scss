@@ -126,5 +126,11 @@
     background-color: variables.$color-primary-light;
     color: variables.$color-white;
     transform: translateY(-3px);
+
+    @media only screen and (max-width: 75em) and (hover: none) {
+      background-color: transparent;
+      color: variables.$color-primary;
+      transform: none;
+    }
   }
 }
